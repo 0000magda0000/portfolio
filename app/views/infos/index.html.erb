@@ -1,0 +1,6 @@
+ <% @contributers.each do |contributer| %>
+  <% contributer.projects.each do |project| %>
+  <%= project.name %>
+  <% end %>
+
+<% end %>

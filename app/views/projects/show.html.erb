@@ -1,0 +1,22 @@
+<div class="container">
+  <h1><%= @project.name %></h1>
+  <%= link_to "#{@project.github_link}" do %>
+    <i class="fab fa-github"></i>
+  <% end %>
+  <h2>built with:</h2>
+  <% @project.languages.each do |language| %>
+    <h4><%= "#{language.name}: #{@statistics_hash[language.name]} %" %></h4>
+  <% end %>
+  <h2>Team:</h1>
+  <% @project.contributers.each do |contributer| %>
+    <% unless contributer.name == "0000magda0000" %>
+      <h4><%= link_to contributer.name, contributer_path(contributer) %></h2>
+    <% else %>
+      <h4><%= contributer.name %></h4>
+    <% end %>
+  <% end %>
+  <h2>since</h2>
+  <%= @project.first_push.to_date %>
+  <h2>updated on</h2>
+  <%= @project.updated_at.to_date %>
+</div>

@@ -1,0 +1,14 @@
+<%= form_for(@project) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :contributors %>
+  <%= f.text_field :contributors %>
+  <%= f.label :website %>
+  <%= f.text_field :website %>
+  <%= f.label :github_link %>
+  <%= f.url_field :github_link %>
+  <%= f.label :first_push %>
+  <%= f.date_field :first_push %>
+  <%= f.label :latest_push %>
+  <%= f.date_field :latest_push %>
+<% end %>

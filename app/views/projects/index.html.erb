@@ -1,0 +1,7 @@
+<div class="container">
+  <% @projects.each do |project| %>
+    <%= link_to project_path(project) do %>
+      <h1><%= project.name %></h1>
+    <% end %>
+  <% end %>
+</div>
