@@ -12,8 +12,6 @@ class LanguagesController < ApplicationController
       @percent[language] = 100 * value / sum
     end
     @percent = @percent.sort_by { |language, value| value }.reverse
-
-    console
   end
 
   def show
