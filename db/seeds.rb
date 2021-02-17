@@ -122,7 +122,7 @@ portfolio_project = Project.create!(
   name: portfolio['name'],
   first_push: portfolio['created_at'],
   github_link: portfolio['html_url'],
-  website: 'https://www.portfolio.info')
+  website: 'https://www.magdabarthofer.herokuapp.comp')
 puts "Created Project"
 
 portfolio_languages_url = 'https://api.github.com/repos/0000magda0000/portfolio/languages'
@@ -174,7 +174,7 @@ apimessagesphp_project = Project.create!(
   name: apimessagesphp['name'],
   first_push: apimessagesphp['created_at'],
   github_link: apimessagesphp['html_url'],
-  website: 'https://www.api-messages-php.info')
+  website: 'http://api-messages-php.herokuapp.com/api/message/read.php')
 puts "Created Project"
 
 apimessagesphp_languages_url = 'https://api.github.com/repos/0000magda0000/api-messages-php/languages'
@@ -226,7 +226,7 @@ apimessage_project = Project.create!(
   name: "#{apimessage['name']}-rails",
   first_push: apimessage['created_at'],
   github_link: apimessage['html_url'],
-  website: 'https://www.api-messages.info')
+  website: 'https://api-messages-rails.herokuapp.com/api/v1/messages')
 puts "Created Project"
 
 apimessage_languages_url = 'https://api.github.com/repos/0000magda0000/api-messages/languages'
