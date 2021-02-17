@@ -13,11 +13,15 @@
       <% end %>
   </h1>
   <h2>built with:</h2>
-  <% unless statistics_hash.empty? %>
-    <% @project.languages.each do |language| %>
-      <h4><%= "#{language.name}: #{@statistics_hash[language.name]} %" %></h4>
+    <% unless @statistics_hash.empty? %>
+      <% @project.languages.each do |language| %>
+        <h4><%= "#{language.name}: #{@statistics_hash[language.name]} %" %></h4>
+      <% end %>
+    <% else %>
+      <% @project.languages.each do |language| %>
+        <h4><%= "#{language.name}: 100 %" %> </h4>
+      <% end %>
     <% end %>
-  <% end %>
   <h2>Team:</h1>
   <% @project.contributers.each do |contributer| %>
     <% unless contributer.name == "0000magda0000" %>

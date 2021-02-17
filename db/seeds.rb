@@ -279,7 +279,7 @@ brad = Project.create!(
 
 bradlanguages = Language.create!(name: "WordPress")
 
-bradcontributers = Contributer.new(
+bradcontributers = Contributer.create!(
   name: "0000magda0000",
   github: "https://github.com/0000magda0000"
 )
@@ -296,7 +296,7 @@ luzie = Project.create!(
 
 luzielanguages = Language.create!(name: "WordPress")
 
-luziecontributers = Contributer.new(
+luziecontributers = Contributer.create!(
   name: "0000magda0000",
   github: "https://github.com/0000magda0000"
 )
@@ -313,11 +313,11 @@ bitsy = Project.create!(
 
 bitsylanguages = Language.create!(name: "WordPress")
 
-bitsycontributers = Contributer.new(
+bitsycontributers = Contributer.create!(
   name: "0000magda0000",
   github: "https://github.com/0000magda0000"
 )
 
 Skill.create!(language_id: bitsylanguages.id, project_id: bitsy.id)
 Info.create!(contributer_id: bitsycontributers.id, project_id: bitsy.id)
-puts "CREATED bitsyKNOX"
+puts "CREATED BITSYKNOX"
