@@ -16,6 +16,5 @@ class ContributersController < ApplicationController
 
 
     @infos = Info.all
-    console
   end
 end
