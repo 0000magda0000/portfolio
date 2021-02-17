@@ -277,7 +277,7 @@ brad = Project.create!(
   first_push: "19th Jun 2020".to_date
 )
 
-bradlanguages = Languages.create!(name: "WordPress")
+bradlanguages = Language.create!(name: "WordPress")
 
 bradcontributers = Contributer.new(
   name: "0000magda0000",
@@ -294,7 +294,7 @@ luzie = Project.create!(
   first_push: "03rd Sep 2020".to_date
 )
 
-luzielanguages = Languages.create!(name: "WordPress")
+luzielanguages = Language.create!(name: "WordPress")
 
 luziecontributers = Contributer.new(
   name: "0000magda0000",
@@ -311,7 +311,7 @@ bitsy = Project.create!(
   first_push: "30st Dec 2020".to_date
 )
 
-bitsylanguages = Languages.create!(name: "WordPress")
+bitsylanguages = Language.create!(name: "WordPress")
 
 bitsycontributers = Contributer.new(
   name: "0000magda0000",
