@@ -16,7 +16,7 @@ queermed_project = Project.create!(
   name: queermed['name'],
   first_push: queermed['created_at'],
   github_link: queermed['html_url'],
-  website: 'https://www.queermed.info')
+  website: 'http://www.queermed.info')
 puts "Created Project"
 
 queermed_languages_url = 'https://api.github.com/repos/clara-lupa/queermed/languages'
@@ -36,8 +36,8 @@ queermed_contributer_array = []
 
 queermed_contributers_parse.each do |contributer, _value|
   queermed_contributer_array << Contributer.create!(
-   name: contributer['login'],
-   github: "https://github.com/#{contributer['login']}"
+    name: contributer['login'],
+    github: "https://github.com/#{contributer['login']}"
   )
 end
 puts "Created Contributers"
@@ -84,7 +84,6 @@ puts "Created Languages with Statistics"
 instrumentalize_contributers_url = 'https://api.github.com/repos/clara-lupa/instrumentalize/contributors'
 instrumentalize_contributers_url_serialized = open(instrumentalize_contributers_url).read
 instrumentalize_contributers_parse = JSON.parse(instrumentalize_contributers_url_serialized)
-instrumentalize_contributers_parse_count = instrumentalize_contributers_parse.count
 instrumentalize_contributer_array = []
 
 instrumentalize_contributers_parse.each do |contributer, _value|
@@ -142,12 +141,11 @@ portfolio_contributers_parse = JSON.parse(portfolio_contributers_url_serialized)
 portfolio_contributer_array = []
 
 portfolio_contributers_parse.each do |contributer, _value|
-portfolio_contributer_array <<  Contributer.create!(
-      name: contributer['login'],
-      github: "https://github.com/#{contributer['login']}"
-    )
+  portfolio_contributer_array <<  Contributer.create!(
+    name: contributer['login'],
+    github: "https://github.com/#{contributer['login']}"
+  )
 end
-portfolio_contributors_count = portfolio_contributers_parse.count
 puts "Created Contributers"
 
 portfolio_contributer_array.each do |pca|
@@ -194,14 +192,12 @@ apimessagesphp_contributers_url_serialized = open(apimessagesphp_contributers_ur
 apimessagesphp_contributers_parse = JSON.parse(apimessagesphp_contributers_url_serialized)
 apimessagesphp_contributer_array = []
 
-
 apimessagesphp_contributers_parse.each do |contributer, _value|
-apimessagesphp_contributer_array <<  Contributer.create!(
+  apimessagesphp_contributer_array <<  Contributer.create!(
       name: contributer['login'],
       github: "https://github.com/#{contributer['login']}"
     )
 end
-apimessagesphp_contributors_count = apimessagesphp_contributers_parse.count
 puts "Created Contributers"
 
 apimessagesphp_contributer_array.each do |pca|
@@ -227,7 +223,7 @@ apimessage_serialized = open(apimessage_url).read
 apimessage = JSON.parse(apimessage_serialized)
 
 apimessage_project = Project.create!(
-  name: apimessage['name'],
+  name: "#{apimessage['name']}-rails",
   first_push: apimessage['created_at'],
   github_link: apimessage['html_url'],
   website: 'https://www.api-messages.info')
@@ -250,12 +246,11 @@ apimessage_contributer_array = []
 
 
 apimessage_contributers_parse.each do |contributer, _value|
-apimessage_contributer_array <<  Contributer.create!(
-      name: contributer['login'],
-      github: "https://github.com/#{contributer['login']}"
-    )
+  apimessage_contributer_array <<  Contributer.create!(
+    name: contributer['login'],
+    github: "https://github.com/#{contributer['login']}"
+  )
 end
-apimessage_contributors_count = apimessage_contributers_parse.count
 puts "Created Contributers"
 
 apimessage_contributer_array.each do |pca|
@@ -267,7 +262,7 @@ end
 puts "Created Infos"
 
 apimessage_languages_array.each do |pla|
-  Skill.create(
+  Skill.create!(
     project_id: apimessage_project.id,
     language_id: pla.id
   )
@@ -275,3 +270,54 @@ end
 
 puts "Created Skills"
 puts "CREATED API MESSAGES RAILS"
+
+brad = Project.create!(
+  name: "bradhenkel.com",
+  website: "http://bradhenkel.com",
+  first_push: "19th Jun 2020".to_date
+)
+
+bradlanguages = Languages.create!(name: "WordPress")
+
+bradcontributers = Contributer.new(
+  name: "0000magda0000",
+  github: "https://github.com/0000magda0000"
+)
+
+Skill.create!(language_id: bradlanguages.id, project_id: brad.id)
+Info.create!(contributer_id: bradcontributers.id, project_id: brad.id)
+puts "CREATED BRADHENKEL"
+
+luzie = Project.create!(
+  name: "luziemeyer.com",
+  website: "http://luziemeyer.com",
+  first_push: "03rd Sep 2020".to_date
+)
+
+luzielanguages = Languages.create!(name: "WordPress")
+
+luziecontributers = Contributer.new(
+  name: "0000magda0000",
+  github: "https://github.com/0000magda0000"
+)
+
+Skill.create!(language_id: luzielanguages.id, project_id: luzie.id)
+Info.create!(contributer_id: luziecontributers.id, project_id: luzie.id)
+puts "CREATED LUZIEMEYER"
+
+bitsy = Project.create!(
+  name: "bitsyknox.com",
+  website: "http://bitsyknox.com",
+  first_push: "30st Dec 2020".to_date
+)
+
+bitsylanguages = Languages.create!(name: "WordPress")
+
+bitsycontributers = Contributer.new(
+  name: "0000magda0000",
+  github: "https://github.com/0000magda0000"
+)
+
+Skill.create!(language_id: bitsylanguages.id, project_id: bitsy.id)
+Info.create!(contributer_id: bitsycontributers.id, project_id: bitsy.id)
+puts "CREATED bitsyKNOX"

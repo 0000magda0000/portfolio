@@ -1,16 +1,22 @@
 <div class="container">
   <h1>
     <%= @project.name %>
-      <%= link_to @project.github_link do %>
-        <i class="fab fa-github"></i>
+      <% unless @project.github_link.nil? %>
+        <%= link_to @project.github_link do %>
+          <i class="fab fa-github"></i>
+        <% end %>
       <% end %>
-      <%= link_to @project.website do %>
-        <i class="fas fa-home"></i>
+      <% unless @project.website.nil? %>
+        <%= link_to @project.website do %>
+          <i class="fas fa-home"></i>
+        <% end %>
       <% end %>
   </h1>
   <h2>built with:</h2>
-  <% @project.languages.each do |language| %>
-    <h4><%= "#{language.name}: #{@statistics_hash[language.name]} %" %></h4>
+  <% unless statistics_hash.empty? %>
+    <% @project.languages.each do |language| %>
+      <h4><%= "#{language.name}: #{@statistics_hash[language.name]} %" %></h4>
+    <% end %>
   <% end %>
   <h2>Team:</h1>
   <% @project.contributers.each do |contributer| %>
