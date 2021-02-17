@@ -1,18 +1,9 @@
-<h1>Technology</h1>
-<% if false %>
-<ul>
-<% @projects.each do |project|  %>
-  <h1><%= link_to "#{project.name}", project_path(project.id) %> uses the following Technologies:</h1>
-  <% project.languages.each do |language| %>
-    <li> <%= "#{language.name}: " %> </li>
-    <%= language.statistics %>
-  <% end %>
-<% end %>
-</ul>
-<% end %>
+<div class="container">
+  <div class="conatiner">
+    <h4>In average these technologies are in use in my projects</h4>
 
-<% @percent.each do |language, p| %>
-  <%= "#{language}: #{p} %" %>
-<% end %>
-
-
+    <% @percent.each do |language, p| %>
+      <h4><%= "#{language}: #{p} %" %></h4>
+    <% end %>
+  </div>
+</div>

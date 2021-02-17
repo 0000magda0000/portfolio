@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @statistics = Project.joins(:languages).where(name: @project.name).pluck(:statistics)
+    @statistics = Project.includes(:languages).where(name: @project.name).pluck(:statistics)
 
     @statistics_hash = {}
     @project.languages.each do |language|

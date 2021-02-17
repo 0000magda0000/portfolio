@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: 'projects#index'
+  root to: "infos#index"
   resources :projects do
     resources :skills, only: [:create, :update, :destroy]
   end
