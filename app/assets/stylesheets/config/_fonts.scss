@@ -1,6 +1,5 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
@@ -14,3 +13,83 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+@font-face {
+    font-family: 'musicnetregular';
+    src: font-url(asset-path('fonts/musicnet-webfont.woff2')) format('woff2'),
+         font-url(asset-path('fonts/musicnet-webfont.woff')) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+$musicnet: 'musicnetregular';
+
+
+
+@font-face {
+    font-family: 'windandbubblesregular';
+    src: font-url(asset-path('fonts/wind_and_bubbles-regular-webfont.woff2')) format('woff2'),
+         font-url(asset-path('fonts/wind_and_bubbles-regular-webfont.woff')) format('woff'),
+         font-url(asset-path('fonts/wind_and_bubbles-regular-webfont.ttf')) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+$windbubbles: 'windandbubblesregular';
+
+
+@font-face {
+    font-family: 'Zwizz Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Zwizz Regular'), font-url(asset-path('fonts/Zwizz-Regular.woff')) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Zwizz Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Zwizz Light'), font-url(asset-path('fonts/Zwizz-Light.woff')) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Zwizz Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Zwizz Medium'), font-url(asset-path('fonts/Zwizz-Medium.woff')) format('woff');
+    }
+    $zwizzmedium: 'Zwizz Medium';
+
+    @font-face {
+    font-family: 'Zwizz SemiBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Zwizz SemiBold'), font-url(asset-path('fonts/Zwizz-SemiBold.woff')) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Zwizz Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Zwizz Bold'), font-url(asset-path('fonts/Zwizz-Bold.woff')) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Zwizz ExtraBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Zwizz ExtraBold'), font-url(asset-path('fonts/Zwizz-ExtraBold.woff')) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Zwizz Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Zwizz Black'), font-url(asset-path('fonts/Zwizz-Black.woff')) format('woff');
+    }
+

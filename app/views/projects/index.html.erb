@@ -1,7 +1,61 @@
-<div class="container">
-  <% @projects.each do |project| %>
-    <%= link_to project_path(project) do %>
-      <h1><%= project.name %></h1>
-    <% end %>
-  <% end %>
+<div class="container cards">
+	<div class="row justify-content-around">
+		<% @projects.each do |project| %>
+			<div class="col-sm-6 card flip-card">
+				<div class="flip-card-inner">
+					<div class="content-card flip-card-front " >
+						<%= cl_image_tag project.photo.key %>
+					</div>
+					<div class="flip-card-back">
+						<div class="heading">
+							<h1><%= project.name %></h1>
+							<% unless project.github_link.nil? %>
+								<%= link_to project.github_link do %>
+									<h1><i class="fab fa-github"></i></h1>
+								<% end %>
+							<% end %>
+							<% unless project.website.nil? %>
+								<%= link_to project.website do %>
+									<h1><i class="fas fa-home"></i></h1>
+								<% end %>
+							<% end %>
+						</div>
+						<div class="container card-details">
+							<div class="row ">
+								<div class="col-sm-6">
+									<p>built with:</p>
+									<% @statistics_hash.each do |statistic, names| %>
+										<% if names[0] == project.name %>
+											<p><%= "#{names[1]}: #{statistic} %" %></p>
+										<% end %>
+									<% end %>
+									<% project.languages.each do |language| %>
+										<% if language.name == "WordPress" %>
+											<p>WordPress: 100 %</p>
+										<% end %>
+									<% end %>
+								</div>
+								<div class="col-sm-6">	 
+									<p>Team:</p>
+									<% project.contributers.each do |contributer| %>
+										<% unless contributer.name == "0000magda0000" %>
+											<p>
+												<%= link_to contributer.name, contributer_path(contributer) %>
+											</p>
+										<% else %>
+											<p>
+												<%= contributer.name %>
+											</p>
+										<% end %>
+									<% end %>
+								</div>	
+								<p>since</p>
+								<%= project.first_push.to_date.strftime("%B %Y") %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	  	<% end %>
+	</div>  
 </div>

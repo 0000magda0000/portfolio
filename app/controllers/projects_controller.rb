@@ -1,6 +1,39 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.all.order(:name).reverse
+    @projects = Project.all
+    statistics = []
+
+
+    @projects.each do |project|
+      statistics << Project
+      .includes(:languages)
+      .where(name: project.name)
+      .pluck(:statistics, :name)
+    end
+    statistics = statistics.flatten.each_slice(2).to_a
+    statistics_by_language = {}
+    statistics.each do |statistic|
+        statistics_by_language[statistic[0]] = statistic[1]
+    end
+    statistics_sums = {}
+    @statistics_converted = statistics_by_language.keys.group_by{|k| statistics_by_language[k] }
+    @statistics_converted.each do |language, statistics|
+      statistics_sums[language] = statistics.sum
+    end
+
+    @statistics_by_language_project = {}
+    Language.all.zip(statistics_by_language).each do |language, (statistic, project)|
+      @statistics_by_language_project[statistic] = [language.name, project]
+    end
+    
+    @statistics_hash = {}
+    statistics_sums.each do |projectname, sum|
+      @statistics_by_language_project.each do |statistic, names|
+        if names[1] == projectname && names[0] != "WordPress"
+          @statistics_hash[(100 * statistic.to_f / sum).round(2)] = [projectname, names[0]]
+        end
+      end
+    end
   end
 
   def show

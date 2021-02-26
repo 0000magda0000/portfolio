@@ -17,6 +17,7 @@ queermed_project = Project.create!(
   first_push: queermed['created_at'],
   github_link: queermed['html_url'],
   website: 'http://www.queermed.info')
+  queermed_project.photo.attach(io: File.open('app/assets/images/queermed.png'), filename: 'queermed.png', content_type: 'image/png')
 puts "Created Project"
 
 queermed_languages_url = 'https://api.github.com/repos/clara-lupa/queermed/languages'
@@ -70,6 +71,8 @@ instrumentalize_project = Project.create!(
   first_push: instrumentalize['created_at'],
   github_link: 'https://github.com/users/clara-lupa/instrumentalize',
   website: 'https://instrumentalize.herokuapp.com')
+  instrumentalize_project.photo.attach(io: File.open('app/assets/images/instrumentalize.png'), filename: 'instrumentalize.png', content_type: 'image/png')
+
 puts "Created Project"
 
 instrumentalize_languages_url = 'https://api.github.com/repos/clara-lupa/instrumentalize/languages'
@@ -123,6 +126,8 @@ portfolio_project = Project.create!(
   first_push: portfolio['created_at'],
   github_link: portfolio['html_url'],
   website: 'https://www.magdabarthofer.herokuapp.comp')
+  portfolio_project.photo.attach(io: File.open('app/assets/images/portfolio.png'), filename: 'portfolio.png', content_type: 'image/png')
+
 puts "Created Project"
 
 portfolio_languages_url = 'https://api.github.com/repos/0000magda0000/portfolio/languages'
@@ -175,6 +180,8 @@ apimessagesphp_project = Project.create!(
   first_push: apimessagesphp['created_at'],
   github_link: apimessagesphp['html_url'],
   website: 'http://api-messages-php.herokuapp.com/api/message/read.php')
+  apimessagesphp_project.photo.attach(io: File.open('app/assets/images/apimessagesphp.png'), filename: 'apimessagesphp.png', content_type: 'image/png')
+
 puts "Created Project"
 
 apimessagesphp_languages_url = 'https://api.github.com/repos/0000magda0000/api-messages-php/languages'
@@ -227,6 +234,8 @@ apimessage_project = Project.create!(
   first_push: apimessage['created_at'],
   github_link: apimessage['html_url'],
   website: 'https://api-messages-rails.herokuapp.com/api/v1/messages')
+  apimessage_project.photo.attach(io: File.open('app/assets/images/apimessage.png'), filename: 'apimessage.png', content_type: 'image/png')
+
 puts "Created Project"
 
 apimessage_languages_url = 'https://api.github.com/repos/0000magda0000/api-messages/languages'
@@ -276,6 +285,8 @@ brad = Project.create!(
   website: "http://bradhenkel.com",
   first_push: "19th Jun 2020".to_date
 )
+brad.photo.attach(io: File.open('app/assets/images/brad.png'), filename: 'brad.png', content_type: 'image/png')
+
 
 bradlanguages = Language.create!(name: "WordPress")
 
@@ -293,6 +304,8 @@ luzie = Project.create!(
   website: "http://luziemeyer.com",
   first_push: "03rd Sep 2020".to_date
 )
+luzie.photo.attach(io: File.open('app/assets/images/luzie.png'), filename: 'luzie.png', content_type: 'image/png')
+
 
 luzielanguages = Language.create!(name: "WordPress")
 
@@ -310,6 +323,8 @@ bitsy = Project.create!(
   website: "http://bitsyknox.com",
   first_push: "30st Dec 2020".to_date
 )
+bitsy.photo.attach(io: File.open('app/assets/images/bitsy.png'), filename: 'bitsy.png', content_type: 'image/png')
+
 
 bitsylanguages = Language.create!(name: "WordPress")
 
