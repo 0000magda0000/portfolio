@@ -1,59 +1,48 @@
-body {
-	background-color: white;
-}
-
-.container {
-
-
-}
-
-.card {
-	border: 0 !important;
-}
-.cards {
-
-}
-
-.heading h1 {
-	font-family: $zwizzmedium !important;
-	color: black;
-	font-size: 1.6vw;
-	background-color: none;
-
-}
-
-.card a:hover {
+.flip-cards {
+    width: 100%;
+    height: 260px;
+    display: inline;
+    white-space: nowrap;
+	color: white;
+	text-align: center;
 	text-decoration: none;
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
 }
+// .flex-row {
+// 	position: fixed;
+//     bottom: 0;
+// 	display: flex;
+// 	height: 260px;
+// 	flex-wrap: nowrap;
+// 	overflow-x: auto;
+// 	width: auto;
 
-.card a {
-	font-family: $zwizzmedium !important;
+// }
+.content {
+	margin-top: 100px;
 }
-
-.card img {
-	width: 22vw;
-	height: auto;
-}
-
-.content-card {
-	margin: 0 auto;
-}
-
-.col-sm-6.card {
-	margin: 64px 0px !important;
+.content .container {
+	padding: 0 0 0 0 !important;
 }
 // flip card
 .flip-card {
   background-color: transparent;
-  width: 22vw;
-  height: 14vw;
+  height: auto;
   perspective: 1000px;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  min-width: 100%;
+  width: 50%;
+  display: inline-block;
 }
 
 .flip-card-inner {
   position: relative;
-  width: 22vw;
-  height: 14vw;
+  width: auto;
+  height: auto;
   text-align: center;
   transition: transform .6s;
   transform-style: preserve-3d;
@@ -64,23 +53,27 @@ body {
 }
 
 .flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 22vw;
-  height: 14vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-
-.flip-card-front {
   background-color: white;
   color: black;
 }
+
+
+.flip-card-front img {
+	width: 100vw;
+	height: auto;
+
+}
+
 
 .flip-card-back {
   border: solid black 3px;
   background-color: white;
   color: black;
   transform: rotate3d(0, 1, 0.5, 3.142rad);
+  width: 100vw;
+  height: auto;
 }
 
 
@@ -109,11 +102,6 @@ h1 {
 
 }
 
-.col-sm-6.card-text p {
-	font-family: $zwizzmedium !important;
-	font-size: .8vw !important;
-
-}
 
 p.card-text, .card-date {
 	font-family: $zwizzmedium;
@@ -135,6 +123,41 @@ p.card-date {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) { 
+
+.flip-cards {
+    width: 100%;
+    height: auto;
+    display: inline;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	scroll-snap-type: x mandatory;
+	overflow-x: unset;
+	overflow-y: unset;
+	white-space: unset;
+}
+.flip-card-front img {
+	width: 60vw;
+	height: auto;
+
+}
+
+.flip-card {
+  background-color: transparent;
+  height: auto;
+  perspective: 1000px;
+  scroll-snap-align: unset;
+  flex: unset;
+  min-width: 60vw;
+  width: 50%;
+}
+
+
+
 
 
 }
+

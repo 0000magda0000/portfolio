@@ -1,6 +1,9 @@
-<div class="navbar container">
-  <%= link_to "Projects", projects_path, class: "nav-item" %>
-  <%= link_to "About", root_path, class: "nav-item" %>
-  <%= link_to "Technologies", languages_path, class: "nav-item" %>
-</div>
-
+<div class="navigation-content">
+	<div class="navigation container">
+		<div class="d-flex flex-column flex-sm-row justify-content-sm-between">
+			<p><%= link_to "Projects", projects_path, class: "nav-item" %></p>
+			<p><%= link_to "About", root_path, class: "nav-item" %></p>
+			<p><%= link_to "Statistics", languages_path, class: "nav-item" %></p>
+		</div> 
+	</div>
+</div>	
