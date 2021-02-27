@@ -8,10 +8,10 @@
 					</div>
 					<div class="flip-card-back">
 						<div class="heading">
-							<h1><%= project.name %></h1>
+							<h1><%= project.name %>&nbsp;</h1>
 							<% unless project.github_link.nil? %>
 								<%= link_to project.github_link do %>
-									<h1><i class="fab fa-github"></i></h1>
+									<h1><i class="fab fa-github">&nbsp;</i></h1>
 								<% end %>
 							<% end %>
 							<% unless project.website.nil? %>
@@ -22,7 +22,7 @@
 						</div>
 						<div class="container card-details">
 							<div class="row ">
-								<div class="col-sm-6">
+								<div class="col-sm-6 card-text">
 									<p>built with:</p>
 									<% @statistics_hash.each do |statistic, names| %>
 										<% if names[0] == project.name %>
@@ -35,7 +35,7 @@
 										<% end %>
 									<% end %>
 								</div>
-								<div class="col-sm-6">	 
+								<div class="col-sm-6 card-text">	 
 									<p>Team:</p>
 									<% project.contributers.each do |contributer| %>
 										<% unless contributer.name == "0000magda0000" %>
@@ -49,8 +49,7 @@
 										<% end %>
 									<% end %>
 								</div>	
-								<p>since</p>
-								<%= project.first_push.to_date.strftime("%B %Y") %>
+								<p class="card-date">since <%= project.first_push.to_date.strftime("%B %Y") %></p>
 							</div>
 						</div>
 					</div>
