@@ -1,6 +1,7 @@
 .container.cards {
 	width: unset !important;
 }
+
 .flip-cards {
     width: 100%;
     display: inline;
@@ -14,22 +15,11 @@
 	white-space: nowrap;
 }
 
-// .flex-row {
-// 	position: fixed;
-//     bottom: 0;
-// 	display: flex;
-// 	height: 260px;
-// 	flex-wrap: nowrap;
-// 	overflow-x: auto;
-// 	width: auto;
 
-// }
-.content {
-
-}
 .content .cards.container {
 	padding: 0 0 0 0 !important;
 }
+
 // flip card
 .flip-card {
   background-color: transparent;
@@ -53,8 +43,6 @@
 
 .flip-card:hover .flip-card-inner {
    transform: rotate3d(0, 1, 0.5, 3.142rad);
-    // transform: rotateY(180deg);
-
 }
 
 .flip-card-front, .flip-card-back {
@@ -65,17 +53,12 @@
   width: 100%;
   height: 100%;
   position: absolute;
-
-
 }
-
 
 .flip-card-front img {
 	width: 100vw;
 	height: auto;
-
 }
-
 
 .flip-card-back {
 	background-color: #3066BE;
@@ -97,7 +80,6 @@
 	transform-style: inherit;
 }
 
-
 p {
     display: block;
     margin-block-start: 0 !important;
@@ -105,6 +87,7 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
 h1 {
     display: block;
     font-size: 1.5vw;
@@ -130,13 +113,14 @@ h1 {
 
 
 .card-text p {
-	font-size: 4vw;
+	font-size: vw;
 }
 
 .card-date {
 	margin: 0 auto;
 
 }
+
 p.card-date {
 	font-size: 4vw;
 	font-family: $snell;
@@ -146,60 +130,63 @@ p.card-date {
 	margin: 0;
     position: relative;
     top: 10%;
-
 }
 
-@media (min-width: 768px) { 
-
-.flip-cards {
-    width: 100%;
-    height: auto;
-    display: inline;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	scroll-snap-type: x mandatory;
-	overflow-x: unset;
-	overflow-y: unset;
-	white-space: unset;
-}
-.flip-card-front img {
-	width: 60vw;
-	height: auto;
-
-}
-
-.flip-card {
-  background-color: transparent;
-  height: auto;
-  perspective: 1000px;
-  scroll-snap-align: unset;
-  flex: unset;
-  min-width: 60vw;
-  width: 50%;
-  margin-bottom: 10vw;
-}
-
-.flip-card-front, .flip-card-back {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background-color: white;
-  color: black;
-  width: 100%;
-  height: 37.5vw;
-  display: inline-block;
+@media ( orientation: landscape) {
 
 
 }
 
-p.card-date {
-	font-size: 1.8vw;
+@media ( min-width: 768px) { 
+	.flip-cards {
+	    width: 100%;
+	    height: auto;
+	    display: inline;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		scroll-snap-type: x mandatory;
+		overflow-x: unset;
+		overflow-y: unset;
+		white-space: unset;
+	}
+
+	.flip-card-front img {
+		width: 60vw;
+		height: auto;
+	}
+
+	.flip-card {
+	  background-color: transparent;
+	  height: auto;
+	  perspective: 1000px;
+	  scroll-snap-align: unset;
+	  flex: unset;
+	  min-width: 60vw;
+	  width: 50%;
+	  margin-bottom: 10vw;
+	}
+
+	.flip-card-front, .flip-card-back {
+	  -webkit-backface-visibility: hidden;
+	  backface-visibility: hidden;
+	  background-color: white;
+	  color: black;
+	  width: 100%;
+	  height: 37.5vw;
+	  display: inline-block;
+	}
+
+	p.card-date {
+		font-size: 1.8vw;
+	}
+
+	.content {
+		margin-top: 100px;
+	}
+
+	.card-text p {
+	font-size: 3vw;
 }
-
-.content {
-	margin-top: 100px;
-}
-
-
 }
 
