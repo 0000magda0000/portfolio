@@ -12,10 +12,11 @@
   left: 0;
   z-index: 10;
   color: white;
+  background-color: $lime;
 }
 
 a.nav-item {
-	color: lightgreen;
+
 	font-size: 18vw;
 	font-family: serif;
 	font-style: italic;
@@ -28,7 +29,7 @@ a.nav-item {
 	.navigation-content {
 		width: 100vw;
 		height: 15%;
-		background-color: white;
+		background-color: $lime;
 	}
 
 

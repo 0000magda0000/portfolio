@@ -11,12 +11,12 @@
 							<div class="heading">
 								<h1><%= project.name %>&nbsp;</h1>
 								<% unless project.github_link.nil? %>
-									<%= link_to project.github_link do %>
+									<%= link_to project.github_link, target: :_blank do %>
 										<h1><i class="fab fa-github">&nbsp;</i></h1>
 									<% end %>
 								<% end %>
 								<% unless project.website.nil? %>
-									<%= link_to project.website do %>
+									<%= link_to project.website, target: :_blank do %>
 										<h1><i class="fas fa-home"></i></h1>
 									<% end %>
 								<% end %>
@@ -41,7 +41,7 @@
 										<% project.contributers.each do |contributer| %>
 											<% unless contributer.name == "0000magda0000" %>
 												<p>
-													<%= link_to contributer.name, contributer_path(contributer) %>
+													<%= link_to contributer.name, contributer_path(contributer, target: :_blank) %>
 												</p>
 											<% else %>
 												<p>
