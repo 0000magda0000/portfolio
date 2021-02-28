@@ -1,6 +1,9 @@
+.container {
+	width: unset !important;
+}
 .flip-cards {
     width: 100%;
-    height: 260px;
+    height: 236px;
     display: inline;
     white-space: nowrap;
 	color: white;
@@ -11,6 +14,7 @@
 	overflow-y: hidden;
 	white-space: nowrap;
 }
+
 // .flex-row {
 // 	position: fixed;
 //     bottom: 0;
@@ -41,15 +45,17 @@
 
 .flip-card-inner {
   position: relative;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   text-align: center;
   transition: transform .6s;
   transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotate3d(0, 1, 0.5, 3.142rad);
+   transform: rotate3d(0, 1, 0.5, 3.142rad);
+    // transform: rotateY(180deg);
+
 }
 
 .flip-card-front, .flip-card-back {
@@ -57,6 +63,11 @@
   backface-visibility: hidden;
   background-color: white;
   color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+
 }
 
 
@@ -68,12 +79,23 @@
 
 
 .flip-card-back {
-  border: solid black 3px;
-  background-color: white;
-  color: black;
-  transform: rotate3d(0, 1, 0.5, 3.142rad);
-  width: 100vw;
-  height: auto;
+	background-color: white;
+	color: black;
+	transform: rotate3d(0, 1, 0.5, 3.142rad);
+	// transform: rotateY(180deg);
+	min-width: 100%;
+	width: 56%;
+	display: table;
+	width: auto;
+	display: table;
+	height: 63vw;
+	position: relative;
+	display: inline-block;
+	border: solid black 3px;
+}
+
+.flip-card-front {
+	transform-style: inherit;
 }
 
 
@@ -86,7 +108,7 @@ p {
 }
 h1 {
     display: block;
-    font-size: 0em;
+    font-size: 1.5vw;
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
@@ -100,6 +122,11 @@ h1 {
     border-bottom: solid black 3px;
     justify-content: center;
 
+
+}
+
+.heading h1 {
+	font-size: 7vw;
 }
 
 
@@ -113,16 +140,18 @@ p.card-text, .card-date {
 
 }
 p.card-date {
-	font-size: 0.5vw;
+	font-size: 3vw;
 }
 
 .card-details {
 	margin: 0;
-    position: absolute;
+    position: relative;
+    display: contents;
     top: 55%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    border: solid black 3px;
 }
 
 @media (min-width: 768px) { 
@@ -153,8 +182,20 @@ p.card-date {
   flex: unset;
   min-width: 60vw;
   width: 50%;
+  margin-bottom: 10vw;
 }
 
+.flip-card-front, .flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 37.5vw;
+  display: inline-block;
+
+
+}
 
 
 
