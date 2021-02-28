@@ -39,6 +39,16 @@ $windbubbles: 'windandbubblesregular';
 
 
 @font-face {
+    font-family: 'Snell';
+    src: font-url(asset-path('fonts/snellbt-regular-webfont.woff2')) format('woff2'),
+         font-url(asset-path('fonts/snellbt-regular-webfont.woff')) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$snell: 'Snell';
+
+@font-face {
     font-family: 'Zwizz Regular';
     font-style: normal;
     font-weight: normal;
