@@ -125,7 +125,7 @@ portfolio_project = Project.create!(
   name: portfolio['name'],
   first_push: portfolio['created_at'],
   github_link: portfolio['html_url'],
-  website: 'https://www.magdabarthofer.herokuapp.comp')
+  website: 'https://www.magdabarthofer.herokuapp.com')
   portfolio_project.photo.attach(io: File.open('app/assets/images/portfolio.png'), filename: 'portfolio.png', content_type: 'image/png')
 
 puts "Created Project"

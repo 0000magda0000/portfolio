@@ -78,7 +78,7 @@
 
 
 .flip-card-back {
-	background-color: white;
+	background-color: #3066BE;
 	color: black;
 	transform: rotate3d(0, 1, 0.5, 3.142rad);
 	// transform: rotateY(180deg);
@@ -90,7 +90,7 @@
 	height: 63vw;
 	position: relative;
 	display: inline-block;
-	border: solid black 8px;
+	border: solid black 2px;
 }
 
 .flip-card-front {
@@ -118,7 +118,7 @@ h1 {
 .heading {
     display: flex;
     margin: 8px auto;
-    border-bottom: solid black 8px;
+    border-bottom: solid black 2px;
     justify-content: center;
 
 
@@ -130,7 +130,7 @@ h1 {
 
 
 .card-text p {
-	font-size: 2.5vw;
+	font-size: 4vw;
 }
 
 .card-date {
@@ -138,14 +138,15 @@ h1 {
 
 }
 p.card-date {
-	font-size: 2.8vw;
+	font-size: 4vw;
 	font-family: $snell;
 }
 
 .card-details {
 	margin: 0;
     position: relative;
-    top: 20%;
+    top: 10%;
+
 }
 
 @media (min-width: 768px) { 
