@@ -34,11 +34,16 @@ a.nav-item {
 		width: 100vw;
 		height: 15%;
 		background-color: $lime;
+		margin-bottom: 24px;
 	}
 }
 
 @media (max-width: 667px) and (orientation: landscape) {
 	a.nav-item {
 		font-size: 3vw;
+	}
+
+	.navigation-content {
+		margin-bottom: 24px;
 	}
 }
