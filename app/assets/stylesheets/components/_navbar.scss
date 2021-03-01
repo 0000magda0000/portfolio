@@ -22,6 +22,10 @@ a.nav-item {
 	font-style: italic;
 }
 
+.navigation.container {
+	max-width: 1249px !important;
+}
+
 @media (min-width: 768px) { 
 	a.nav-item {
 		font-size: 7vw;

@@ -6,7 +6,6 @@
     width: 100%;
     display: inline;
     white-space: nowrap;
-	color: white;
 	text-align: center;
 	text-decoration: none;
 	scroll-snap-type: x mandatory;
@@ -48,7 +47,6 @@
 .flip-card-front, .flip-card-back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: white;
   color: black;
   width: 100%;
   height: 100%;
@@ -142,7 +140,6 @@ p.card-date {
 	    width: 100%;
 	    height: auto;
 	    display: inline;
-		color: white;
 		text-align: center;
 		text-decoration: none;
 		scroll-snap-type: x mandatory;
@@ -170,7 +167,6 @@ p.card-date {
 	.flip-card-front, .flip-card-back {
 	  -webkit-backface-visibility: hidden;
 	  backface-visibility: hidden;
-	  background-color: white;
 	  color: black;
 	  width: 100%;
 	  height: 37.5vw;
