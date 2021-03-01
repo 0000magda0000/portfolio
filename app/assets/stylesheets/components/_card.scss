@@ -130,10 +130,7 @@ p.card-date {
     top: 10%;
 }
 
-@media ( orientation: landscape) {
 
-
-}
 
 @media ( min-width: 768px) { 
 	.flip-cards {
@@ -182,7 +179,18 @@ p.card-date {
 	}
 
 	.card-text p {
-	font-size: 3vw;
+		font-size: 3vw;
+	}
 }
+
+@media (max-width: 667px) and (orientation: landscape) {
+	.flip-card-front img {
+		width: 80vw;
+		height: auto;
+	}
+
+	.flip-card-back {
+		height: 50vw;
+	}
 }
 

@@ -35,6 +35,10 @@ a.nav-item {
 		height: 15%;
 		background-color: $lime;
 	}
+}
 
-
+@media (max-width: 667px) and (orientation: landscape) {
+	a.nav-item {
+		font-size: 3vw;
+	}
 }
