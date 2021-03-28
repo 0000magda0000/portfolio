@@ -10,7 +10,7 @@ require 'mina/deploy'
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :application_name, 'PORTFOLIO'
-set :domain, 'error.supply'
+set :domain, '157.90.230.148'
 set :user, fetch(:application_name)
 set :deploy_to, "/home/#{fetch(:user)}/app"
 set :repository, 'git@github.com:0000magda0000/portfolio.git'
