@@ -16,6 +16,8 @@ set :deploy_to, "/home/#{fetch(:user)}/app"
 set :repository, 'git@github.com:0000magda0000/portfolio.git'
 set :branch, 'master'
 set :rvm_use_path, '/etc/profile.d/rvm.sh'
+set :term_mode, nil
+
 
 # Optional settings:
 #   set :user, 'foobar'          # Username in the server to SSH to.
