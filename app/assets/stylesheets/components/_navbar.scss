@@ -12,8 +12,25 @@
   left: 0;
   z-index: 10;
   color: white;
-  background-color: $lime;
+  -webkit-animation: rainbow 45s infinite alternate;
+  animation: rainbow 45s infinite alternate;
 }
+
+@-webkit-keyframes rainbow
+{
+    0%    {  background-color: $pink; }
+    12.5% {  background-color: $baby-blue; }
+    25%   {  background-color: $brown; }
+    37.5% {  background-color: $red; }
+    50%   {  background-color: $orange; }
+    62.5% {  background-color: $yellow; }
+    75%   {  background-color: $green; }
+    87.5% {  background-color: $blue; }
+    100%  {  background-color: $purple; }
+}
+
+
+
 
 a.nav-item {
 
@@ -30,16 +47,34 @@ a.nav-item {
 		margin-bottom: 24px;
 	}
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
 	a.nav-item {
 		font-size: 7vw;
 }
 	.navigation-content {
-		width: 100vw;
-		height: 15%;
-		background-color: $lime;
-		margin-bottom: 24px;
-	}
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  color: white;
+  -webkit-animation: rainbow 45s infinite alternate;
+  animation: rainbow 45s infinite alternate;
+}
+
+@-webkit-keyframes rainbow
+{
+    0%    {  background-color: $pink; }
+    12.5% {  background-color: $baby-blue; }
+    25%   {  background-color: $brown; }
+    37.5% {  background-color: $red; }
+    50%   {  background-color: $orange; }
+    62.5% {  background-color: $yellow; }
+    75%   {  background-color: $green; }
+    87.5% {  background-color: $blue; }
+    100%  {  background-color: $purple; }
+}
 }
 
 @media (max-width: 667px) and (orientation: landscape) {

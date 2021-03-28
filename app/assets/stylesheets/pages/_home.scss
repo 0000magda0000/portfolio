@@ -1,1 +1,185 @@
-// Specific CSS for your home-page
+* {
+
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  padding-left: 8px;
+  font-size: 3.5rem !important;
+}
+
+.landingpage-text {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+}
+
+a {
+  color: lightpink !important;
+}
+
+body {
+
+    color: black !important;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+
+.flowers-container {
+  background-color: red !important;
+  position: relative;
+}
+
+
+.cb-slideshow li:nth-child(1) span {
+    background-image: url(flower1.png)
+}
+.cb-slideshow li:nth-child(2) span {
+    background-image: url(flower2.png);
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url(flower3.png);
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url(flower4.png);
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url(flower5.png);
+    animation-delay: 24s;
+}
+
+
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+
+/* github */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+body {
+  font-family: "Roboto", helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0;
+}
+
+.container {
+  width: 80em;
+  margin: 0 auto;
+  display: grid;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+}
+
+p {
+  font-size: 1.3em;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+.card {
+  margin: 2em;
+  padding: 2em;
+  display: grid;
+  grid-auto-rows: min-content;
+  }
+
+.image.round {
+  width: 30%;
+  border-radius: 50%;
+  padding: 2em;
+}
+
+li {
+  list-style: none;
+  padding: 1em;
+  display: inline;
+}
+
+.list-inline li {
+  display: inline;
+  font-size: 3em;
+  padding: .5em;
+}
+
+img.logo.small {
+  display: inline;
+  width: 10%;
+}
+
+.programming {
+  font-size: 2em;
+  text-decoration: underline;
+  font-weight: 100;
+}
+
+
+
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+}
+  li {
+  list-style: none;
+  padding: 1em;
+  display: reset;
+  line-height: 2em;
+}
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+}
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+   .container {
+}
+}
