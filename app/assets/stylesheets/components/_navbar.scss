@@ -18,15 +18,15 @@
 
 @-webkit-keyframes rainbow
 {
-    0%    {  background-color: $pink; }
-    12.5% {  background-color: $baby-blue; }
-    25%   {  background-color: $brown; }
-    37.5% {  background-color: $red; }
-    50%   {  background-color: $orange; }
-    62.5% {  background-color: $yellow; }
-    75%   {  background-color: $green; }
-    87.5% {  background-color: $blue; }
-    100%  {  background-color: $purple; }
+    0%    {  background-color: lightgray; }
+    12.5% {  background-color: silver; }
+    25%   {  background-color: darkgray; }
+    37.5% {  background-color: gray; }
+    50%   {  background-color: dimgray; }
+    62.5% {  background-color: lightslategray; }
+    75%   {  background-color: slategray; }
+    87.5% {  background-color: darkslategray; }
+    100%  {  background-color: black; }
 }
 
 
@@ -62,18 +62,17 @@ a.nav-item {
   -webkit-animation: rainbow 45s infinite alternate;
   animation: rainbow 45s infinite alternate;
 }
-
 @-webkit-keyframes rainbow
 {
-    0%    {  background-color: $pink; }
-    12.5% {  background-color: $baby-blue; }
-    25%   {  background-color: $brown; }
-    37.5% {  background-color: $red; }
-    50%   {  background-color: $orange; }
-    62.5% {  background-color: $yellow; }
-    75%   {  background-color: $green; }
-    87.5% {  background-color: $blue; }
-    100%  {  background-color: $purple; }
+    0%    {  background-color: lightgray; }
+    12.5% {  background-color: silver; }
+    25%   {  background-color: darkgray; }
+    37.5% {  background-color: gray; }
+    50%   {  background-color: dimgray; }
+    62.5% {  background-color: lightslategray; }
+    75%   {  background-color: slategray; }
+    87.5% {  background-color: darkslategray; }
+    100%  {  background-color: black; }
 }
 }
 
