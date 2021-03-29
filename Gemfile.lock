@@ -259,6 +259,7 @@ DEPENDENCIES
   mina (= 1.2.3)
   pg
   puma (~> 4.1)
+  racc (~> 1.4, >= 1.4.14)
   rails (~> 6.0.3, >= 6.0.3.5)
   sass-rails (>= 6)
   selenium-webdriver
