@@ -1,7 +1,6 @@
 require 'mina/rails'
 require 'mina/git'
 require 'mina/rbenv'
-require 'mina/deploy'
 
 # Basic settings:
 #   domain       - The hostname to SSH to.
@@ -9,14 +8,12 @@ require 'mina/deploy'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :application_name, 'PORTFOLIO'
+set :application_name, 'portfolio'
 set :domain, '157.90.230.148'
-set :user, fetch(:application_name)
-set :deploy_to, "/home/#{fetch(:user)}/app"
+set :deploy_to, '/home/portfolio/app'
 set :repository, 'git@github.com:0000magda0000/portfolio.git'
 set :branch, 'master'
-set :rvm_use_path, '/etc/profile.d/rvm.sh'
-set :term_mode, nil
+set :user, 'portfolio'
 
 
 # Optional settings:
@@ -32,17 +29,32 @@ set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/
 
 # This task is the environment that is loaded for all remote run commands, such as
 # `mina deploy` or `mina rake`.
-task :remote_environment do
-  ruby_version = File.read('.ruby-version').strip
-  raise "Couldn't determine Ruby version: Do you have a file .ruby-version in your project root?" if ruby_version.empty?
+set :rbenv_path, "/root/.rbenv"
 
-  invoke :'rbenv:load'
+task :'rbenv:load' do
+  comment %{Loading rbenv}
+  command %{export RBENV_ROOT="#{fetch(:rbenv_path)}"}
+  command %{export PATH="#{fetch(:rbenv_path)}/bin:$PATH"}
+  command %{
+    if ! which rbenv >/dev/null; then
+      echo "! rbenv not found"
+      echo "! If rbenv is installed, check your :rbenv_path setting."
+      exit 1
+    fi
+  }
+  command %{eval "$(rbenv init -)"}
 end
+
+task :remote_environment do
+  # invoke :'rbenv:load'
+# invoke :'rvm:use', ruby_version
+end
+
+
 
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 task :setup do
-
   in_path(fetch(:shared_path)) do
 
     command %[mkdir -p config]
