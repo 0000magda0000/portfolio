@@ -22,6 +22,7 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
 gem 'racc', '~> 1.4', '>= 1.4.14'
+gem 'listen', '~> 3.2'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -44,7 +45,6 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
