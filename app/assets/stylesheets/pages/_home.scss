@@ -56,22 +56,23 @@ img {
 
 
 .cb-slideshow li:nth-child(1) span {
-    background-image: url(flower1.png)
+    background-image: url(<%= asset_path 'flower1.png' %>)
+
 }
 .cb-slideshow li:nth-child(2) span {
-    background-image: url(flower2.png);
+    background-image: url(<%= asset_path 'flower2.png' %>);
     animation-delay: 6s;
 }
 .cb-slideshow li:nth-child(3) span {
-    background-image: url(flower3.png);
+    background-image: url(<%= asset_path 'flower3.png' %>);
     animation-delay: 12s;
 }
 .cb-slideshow li:nth-child(4) span {
-    background-image: url(flower4.png);
+    background-image: url(<%= asset_path 'flower4.png' %>);
     animation-delay: 18s;
 }
 .cb-slideshow li:nth-child(5) span {
-    background-image: url(flower5.png);
+    background-image: url(<%= asset_path 'flower5.png' %>);
     animation-delay: 24s;
 }
 
