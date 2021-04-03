@@ -56,7 +56,7 @@ img {
 
 
 .cb-slideshow li:nth-child(1) span {
-    background-image: url(<%= asset_path 'flower1.png' %>)
+    background-image: url(<%= asset_path 'flower1.png' %>);
 
 }
 .cb-slideshow li:nth-child(2) span {
